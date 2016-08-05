@@ -1,10 +1,21 @@
-CFLAGS=-fPIC
+CC ?= cc
+CFLAGS ?= -g -fPIC
+LDFLAGS ?=
 
-all: lib test
+LIBENCRYPT_OBJS = encrypt.o
+TEST_OBJS = main.o
+OBJS = $(LIBENCRYPT_OBJS) $(TEST_OBJS)
+TARGETS = libencrypt.so test
 
-lib: encrypt.o
-	cc -shared -o libencrypt.so encrypt.o -lm
+all: $(TARGETS)
 
-test: main.o
-	cc -o test -L. main.o -lencrypt
+libencrypt.so: $(LIBENCRYPT_OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -shared -o $@ $(LIBENCRYPT_OBJS) -lm
 
+test: libencrypt.so $(TEST_OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -Wl,-rpath='$$ORIGIN' -o $@ $(TEST_OBJS) -L$(CURDIR) -lencrypt 
+
+lib: libencrypt.so
+
+clean:
+	$(RM) $(OBJS) $(TARGETS)
