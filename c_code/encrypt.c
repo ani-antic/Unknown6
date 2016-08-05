@@ -10,1324 +10,779 @@ static uint8_t rotl8(uint8_t x, int n)
 #define _DWORD uint32_t
 
 //----- (00087568) --------------------------------------------------------
-unsigned char* sub_87568(unsigned char* result, unsigned char* a2)
+unsigned char * sub_87568(_DWORD* result, _DWORD *a2)
 {
-	int v2; // r3@1
-	int v3; // ST114_4@1
-	int v4; // r3@1
-	int v5; // r4@1
-	int v6; // ST4C_4@1
-	int v7; // STFC_4@1
-	int v8; // r3@1
-	int v9; // ST118_4@1
-	int v10; // r5@1
-	int v11; // r4@1
-	int v12; // ST04_4@1
-	int v13; // r2@1
-	int v14; // ST11C_4@1
-	int v15; // r6@1
-	int v16; // ST98_4@1
-	int v17; // r3@1
-	int v18; // ST120_4@1
-	int v19; // ST10_4@1
-	int v20; // r5@1
-	int v21; // r6@1
-	int v22; // STE4_4@1
-	int v23; // r5@1
-	int v24; // ST50_4@1
-	int v25; // ST7C_4@1
-	int v26; // ST88_4@1
-	int v27; // r5@1
-	int v28; // STE8_4@1
-	int v29; // r7@1
-	int v30; // ST8C_4@1
-	int v31; // ST54_4@1
-	int v32; // r7@1
-	int v33; // r5@1
-	int v34; // ST90_4@1
-	int v35; // ST2C_4@1
-	int v36; // r5@1
-	int v37; // r3@1
-	int v38; // ST34_4@1
-	int v39; // ST78_4@1
-	int v40; // r5@1
-	int v41; // ST124_4@1
-	int v42; // r8@1
-	int v43; // r9@1
-	int v44; // ST68_4@1
-	int v45; // r4@1
-	int v46; // ST128_4@1
-	int v47; // r7@1
-	int v48; // r5@1
-	int v49; // STF4_4@1
-	int v50; // r3@1
-	int v51; // STF0_4@1
-	int v52; // ST14C_4@1
-	int v53; // STEC_4@1
-	int v54; // lr@1
-	int v55; // ST6C_4@1
-	int v56; // r7@1
-	int v57; // ST150_4@1
-	int v58; // ST154_4@1
-	int v59; // lr@1
-	int v60; // STB8_4@1
-	int v61; // STD4_4@1
-	int v62; // r5@1
-	int v63; // ST58_4@1
-	int v64; // ST64_4@1
-	int v65; // ST20_4@1
-	int v66; // ST12C_4@1
-	int v67; // r2@1
-	int v68; // r12@1
-	int v69; // ST9C_4@1
-	int v70; // ST5C_4@1
-	int v71; // STBC_4@1
-	int v72; // ST48_4@1
-	int v73; // ST30_4@1
-	int v74; // STD8_4@1
-	int v75; // ST110_4@1
-	int v76; // ST08_4@1
-	int v77; // ST40_4@1
-	int v78; // ST74_4@1
-	int v79; // ST14_4@1
-	int v80; // STA4_4@1
-	int v81; // r11@1
-	int v82; // r6@1
-	int v83; // STC0_4@1
-	int v84; // ST84_4@1
-	int v85; // STDC_4@1
-	int v86; // ST184_4@1
-	int v87; // r5@1
-	int v88; // STD0_4@1
-	int v89; // ST144_4@1
-	int v90; // ST160_4@1
-	int v91; // ST170_4@1
-	int v92; // r3@1
-	int v93; // ST178_4@1
-	int v94; // ST10C_4@1
-	int v95; // STAC_4@1
-	int v96; // STF8_4@1
-	int v97; // r7@1
-	int v98; // ST15C_4@1
-	int v99; // ST18_4@1
-	int v100; // ST174_4@1
-	int v101; // STC8_4@1
-	int v102; // lr@1
-	int v103; // ST80_4@1
-	int v104; // ST24_4@1
-	int v105; // STE0_4@1
-	int v106; // r4@1
-	int v107; // STA0_4@1
-	int v108; // r5@1
-	int v109; // ST19C_4@1
-	int v110; // ST16C_4@1
-	int v111; // r3@1
-	int v112; // ST44_4@1
-	int v113; // r3@1
-	int v114; // r2@1
-	int v115; // r7@1
-	int v116; // ST108_4@1
-	int v117; // r3@1
-	int v118; // ST38_4@1
-	int v119; // STC4_4@1
-	int v120; // ST70_4@1
-	int v121; // r3@1
-	int v122; // ST94_4@1
-	int v123; // r3@1
-	int v124; // r10@1
-	int v125; // r3@1
-	int v126; // ST100_4@1
-	int v127; // ST3C_4@1
-	int v128; // r3@1
-	int v129; // ST168_4@1
-	int v130; // r3@1
-	int v131; // r6@1
-	int v132; // ST28_4@1
-	int v133; // r3@1
-	int v134; // ST130_4@1
-	int v135; // r6@1
-	int v136; // ST1C_4@1
-	int v137; // ST134_4@1
-	int v138; // STB4_4@1
-	int v139; // r9@1
-	int v140; // STCC_4@1
-	int v141; // ST158_4@1
-	int v142; // r2@1
-	int v143; // r5@1
-	int v144; // ST0C_4@1
-	int v145; // r2@1
-	int v146; // ST138_4@1
-	int v147; // r7@1
-	int v148; // STA8_4@1
-	int v149; // r2@1
-	int v150; // r8@1
-	int v151; // r3@1
-	int v152; // ST13C_4@1
-	int v153; // r7@1
-	int v154; // ST2C_4@1
-	int v155; // ST140_4@1
-	int v156; // r2@1
-	int v157; // ST180_4@1
-	int v158; // ST190_4@1
-	int v159; // ST17C_4@1
-	int v160; // r7@1
-	int v161; // r4@1
-	int v162; // ST30_4@1
-	int v163; // ST188_4@1
-	int v164; // ST18C_4@1
-	int v165; // ST194_4@1
-	int v166; // r12@1
-	int v167; // ST84_4@1
-	int v168; // ST164_4@1
-	int v169; // r3@1
-	int v170; // ST198_4@1
-	int v171; // ST1B0_4@1
-	int v172; // STAC_4@1
-	int v173; // ST1B8_4@1
-	int v174; // STD8_4@1
-	int v175; // ST148_4@1
-	int v176; // r11@1
-	int v177; // r12@1
-	int v178; // STB0_4@1
-	int v179; // ST110_4@1
-	int v180; // r4@1
-	int v181; // ST40_4@1
-	int v182; // ST144_4@1
-	int v183; // ST74_4@1
-	int v184; // lr@1
-	int v185; // ST54_4@1
-	int v186; // r12@1
-	int v187; // ST1BC_4@1
-	int v188; // r1@1
-	int v189; // r6@1
-	int v190; // r5@1
-	int v191; // lr@1
-	int v192; // r3@1
-	int v193; // ST184_4@1
-	int v194; // ST10C_4@1
-	int v195; // ST170_4@1
-	int v196; // ST164_4@1
-	int v197; // lr@1
-	int v198; // ST1AC_4@1
-	int v199; // ST1A8_4@1
-	int v200; // ST15C_4@1
-	int v201; // STD0_4@1
-	int v202; // ST48_4@1
-	int v203; // ST60_4@1
-	int v204; // r4@1
-	int v205; // STA8_4@1
-	int v206; // ST1B4_4@1
-	int v207; // r11@1
-	int v208; // r8@1
-	int v209; // ST16C_4@1
-	int v210; // ST98_4@1
-	int v211; // ST1A4_4@1
-	int v212; // ST168_4@1
-	int v213; // r3@1
-	int v214; // ST174_4@1
-	int v215; // r9@1
-	int v216; // r10@1
-	int v217; // STC0_4@1
-	int v218; // ST40_4@1
-	int v219; // r3@1
-	int v220; // r1@1
-	int v221; // r9@1
-	int v222; // r1@1
-	int v223; // r12@1
-	int v224; // r9@1
-	int v225; // ST13C_4@1
-	int v226; // r11@1
-	int v227; // r4@1
-	int v228; // r5@1
-	int v229; // ST158_4@1
-	int v230; // lr@1
-	int v231; // ST04_4@1
-	int v232; // r6@1
-	int v233; // r4@1
-	int v234; // ST124_4@1
-	int v235; // ST168_4@1
-	int v236; // r3@1
-	int v237; // ST1AC_4@1
-	int v238; // r12@1
-	int v239; // ST1B4_4@1
-	int v240; // r10@1
-	int v241; // ST114_4@1
-	int v242; // ST198_4@1
-	int v243; // r8@1
-	int v244; // STE8_4@1
-	int v245; // ST118_4@1
-	int v246; // STA0_4@1
-	int v247; // r9@1
-	int v248; // STD8_4@1
-	int v249; // STF4_4@1
-	int v250; // ST90_4@1
-	int v251; // lr@1
-	int v252; // ST180_4@1
-	int v253; // lr@1
-	int v254; // r9@1
-	int v255; // ST148_4@1
-	int v256; // r6@1
-	int v257; // r11@1
-	int v258; // ST178_4@1
-	int v259; // ST120_4@1
-	int v260; // ST100_4@1
-	int v261; // ST17C_4@1
-	int v262; // ST40_4@1
-	int v263; // r7@1
-	int v264; // STEC_4@1
-	int v265; // r6@1
-	int v266; // ST9C_4@1
-	int v267; // r8@1
-	int v268; // r1@1
-	int v269; // ST14C_4@1
-	int v270; // STD0_4@1
-	int v271; // ST150_4@1
-	int v272; // STD4_4@1
-	int v273; // ST64_4@1
-	int v274; // STCC_4@1
-	int v275; // STC8_4@1
-	int v276; // r6@1
-	int v277; // ST104_4@1
-	int v278; // ST144_4@1
-	int v279; // ST10C_4@1
-	int v280; // ST38_4@1
-	int v281; // STF0_4@1
-	int v282; // STBC_4@1
-	int v283; // r3@1
-	int v284; // r7@1
-	int v285; // ST100_4@1
-	int v286; // ST68_4@1
-	int v287; // r10@1
-	int v288; // r2@1
-	int v289; // STA8_4@1
-	int v290; // r4@1
-	int v291; // r12@1
-	int v292; // ST7C_4@1
-	int v293; // STA0_4@1
-	int v294; // r8@1
-	int v295; // ST28_4@1
-	int v296; // ST60_4@1
-	int v297; // r1@1
-	int v298; // ST04_4@1
-	int v299; // ST6C_4@1
-	int v300; // ST54_4@1
-	int v301; // r7@1
-	int v302; // r10@1
-	int v303; // lr@1
-	int v304; // r3@1
-	int v305; // STA0_4@1
-	int v306; // r5@1
-	int v307; // r8@1
-	int v308; // r6@1
-	int v309; // ST8C_4@1
-	int v310; // r11@1
-	int v311; // ST08_4@1
-	int v312; // STC8_4@1
-	int v313; // r12@1
-	int v314; // ST84_4@1
-	int v315; // STA8_4@1
-	int v316; // ST5C_4@1
-	int v317; // ST7C_4@1
-	int v318; // lr@1
-	int v319; // r11@1
-	int v320; // STD8_4@1
-	int v321; // r9@1
-	int v322; // STA4_4@1
-	int v323; // r4@1
-	int v324; // r6@1
-	int v325; // ST0C_4@1
-	int v326; // ST10_4@1
-	int v327; // ST48_4@1
-	int v328; // r5@1
-	int v329; // r2@1
-	int v330; // STE8_4@1
-	int v331; // ST114_4@1
-	int v332; // ST80_4@1
-	int v333; // r10@1
-	int v334; // STBC_4@1
-	int v335; // ST04_4@1
-	int v336; // ST08_4@1
-	int v337; // STC4_4@1
-	int v338; // STCC_4@1
-	int v339; // ST3C_4@1
-	int v340; // STD0_4@1
-	int v341; // lr@1
-	int v342; // r11@1
-	int v343; // STC8_4@1
-	int v344; // ST98_4@1
-	int v345; // r2@1
-	int v346; // r1@1
-	int v347; // r3@1
-	int v348; // ST88_4@1
-	int v349; // STA4_4@1
-	int v350; // r6@1
-	int v351; // STB0_4@1
-	int v352; // lr@1
-	int v353; // r3@1
-	int v354; // ST94_4@1
-	int v355; // r4@1
-	int v356; // ST8C_4@1
-	int v357; // r6@1
-	int v358; // STB4_4@1
-	int v359; // r7@1
-	int v360; // r12@1
-	int v361; // STE0_4@1
-	int v362; // STD0_4@1
-	int v363; // ST7C_4@1
-	int v364; // STDC_4@1
-	int v365; // STE8_4@1
-	int v366; // ST10_4@1
-	int v367; // STD4_4@1
-	int v368; // STCC_4@1
-	int v369; // r8@1
-	int v370; // STC8_4@1
-	int v371; // lr@1
-	int v372; // ST44_4@1
-	int v373; // r5@1
-	int v374; // ST110_4@1
-	int v375; // r3@1
-	int v376; // STBC_4@1
-	int v377; // ST14_4@1
-	int v378; // r4@1
-	int v379; // ST10C_4@1
-	int v380; // ST108_4@1
-	int v381; // ST104_4@1
-	int v382; // r7@1
-	int v383; // r12@1
-	int v384; // r7@1
-	int v385; // r9@1
-	int v386; // STE0_4@1
-	int v387; // STF0_4@1
-	int v388; // STE4_4@1
-	int v389; // r8@1
-	int v390; // STD0_4@1
-	int v391; // STD8_4@1
-	int v392; // ST100_4@1
-	int v393; // STA8_4@1
-	int v394; // STFC_4@1
-	int v395; // STF4_4@1
-	int v396; // STB0_4@1
-	int v397; // ST94_4@1
-	int v398; // lr@1
-	int v399; // ST90_4@1
-	int v400; // r3@1
-	int v401; // STB4_4@1
-	int v402; // ST70_4@1
-	int v403; // STC8_4@1
-	int v404; // ST0C_4@1
-	int v405; // ST30_4@1
-	int v406; // r2@1
-	int v407; // r5@1
-	int v408; // r6@1
-	int v409; // r6@1
-	int v410; // r9@1
-	int v411; // r6@1
-	int v412; // r9@1
-	int v413; // r6@1
-	int v414; // r9@1
-	int v415; // r6@1
-	int v416; // r9@1
-	int v417; // r6@1
-	int v418; // r9@1
-	int v419; // r6@1
-	int v420; // r6@1
-	int v421; // r5@1
-	int v422; // r12@1
-	int v423; // r9@1
-	int v424; // r6@1
-	int v425; // ST5C_4@1
-	int v426; // r5@1
-	int v427; // r7@1
-	int v428; // r7@1
-	int v429; // r6@1
-	int v430; // r9@1
-	int v431; // r6@1
-	int v432; // r9@1
-	int v433; // r6@1
-	int v434; // r4@1
-	int v435; // r6@1
-	int v436; // r12@1
-	int v437; // r6@1
-	int v438; // r8@1
-	int v439; // r6@1
-	int v440; // r6@1
-	int v441; // r12@1
-	int v442; // r6@1
-	int v443; // r8@1
-	int v444; // r1@1
-	int v445; // r6@1
-	int v446; // lr@1
-	int v447; // r3@1
-	int v448; // r4@1
-	int v449; // r6@1
-	int v450; // lr@1
-	int v451; // r3@1
-	int v452; // r6@1
-	int v453; // ST0C_4@1
-	int v454; // r8@1
-	int v455; // r1@1
-	int v456; // ST70_4@1
-	int v457; // ST10_4@1
-	int v458; // ST30_4@1
-	int v459; // r3@1
-	int v460; // r2@1
-	int v461; // ST5C_4@1
-	int v462; // r12@1
-	int v463; // r6@1
-	int v464; // ST28_4@1
-	int v465; // ST58_4@1
-	int v466; // r4@1
-	int v467; // r7@1
-	int v468; // ST20_4@1
-	int v469; // ST0C_4@1
-	int v470; // ST6C_4@1
-	int v471; // ST3C_4@1
-	int v472; // r8@1
-	int v473; // ST44_4@1
-	int v474; // ST54_4@1
-	int v475; // r12@1
-	int v476; // ST60_4@1
-	int v477; // ST14_4@1
-	int v478; // r1@1
-	int v479; // ST68_4@1
-	int v480; // r12@1
-	int v481; // r8@1
-	int v482; // r1@1
-	int v483; // ST74_4@1
-	int v484; // lr@1
-	int v485; // ST50_4@1
-	int v486; // ST38_4@1
-	int v487; // ST34_4@1
-	int v488; // ST48_4@1
-	int v489; // ST24_4@1
-	int v490; // r12@1
-	int v491; // r7@1
-	int v492; // ST78_4@1
-	int v493; // ST64_4@1
-	int v494; // r12@1
-	int v495; // r4@1
-	int v496; // r8@1
-	int v497; // r1@1
-	int v498; // ST4C_4@1
-	int v499; // r9@1
-	int v500; // ST44_4@1
-	int v501; // r8@1
-	int v502; // ST1C_4@1
-	int v503; // r5@1
-	int v504; // r1@1
-	int v505; // r7@1
-	int v506; // ST18_4@1
-	int v507; // r9@1
-	int v508; // r4@1
-	int v509; // r8@1
-	int v510; // ST2C_4@1
-	int v511; // ST3C_4@1
-	int v512; // r6@1
-	int v513; // r4@1
-	int v514; // r2@1
-	int v515; // r11@1
-	int v516; // r2@1
-	int v517; // ST08_4@1
-	int v518; // r11@1
-	int v519; // r2@1
-	int v520; // r11@1
-	int v521; // r6@1
-	int v522; // r1@1
-	int v523; // ST40_4@1
-	int v524; // ST28_4@1
-	int v525; // r12@1
-	int v526; // ST04_4@1
-	int v527; // ST0C_4@1
-	int v528; // lr@1
-	int v529; // ST30_4@1
-	int v530; // r4@1
-	int v531; // r12@1
-	int v532; // r6@1
-	int v533; // r3@1
-	int v534; // r11@1
-	int v535; // ST20_4@1
-	int v536; // r6@1
-	int v537; // r5@1
-	int v538; // r9@1
-	int v539; // r5@1
-	int v540; // r3@1
-	int v541; // ST04_4@1
-	int v542; // r5@1
-	int v543; // r9@1
-	int v544; // r7@1
-	int v545; // r7@1
-	int v546; // r7@1
-	int v547; // r2@1
-	int v548; // r2@1
-	int v549; // r2@1
-	int v550; // r2@1
-	int v551; // r3@1
+	// RESULT must have a size of (at least) 752 bytes / 188 _DWORD
+	// a2 has a size of 256 bytes / 64 _DWORD at least
 
-	v2 = *(_DWORD *)a2;
-	*(_DWORD *)result = *(_DWORD *)a2;
-	v3 = v2;
-	v4 = *(_DWORD *)(a2 + 4);
-	*(_DWORD *)(result + 4) = v4;
-	v5 = *(_DWORD *)(a2 + 8);
-	v6 = v4;
-	v7 = ~v4;
-	*(_DWORD *)(result + 8) = v5;
-	v8 = *(_DWORD *)(a2 + 12);
-	v9 = v5;
-	*(_DWORD *)(result + 12) = v8;
-	v10 = *(_DWORD *)(a2 + 16);
-	v11 = ~v8;
-	v12 = v8;
-	*(_DWORD *)(result + 16) = v10;
-	v13 = *(_DWORD *)(a2 + 20);
-	v14 = v10;
-	*(_DWORD *)(result + 20) = v13;
-	v15 = *(_DWORD *)(a2 + 24);
-	v16 = ~v13;
-	*(_DWORD *)(result + 24) = v15;
-	v17 = *(_DWORD *)(a2 + 28);
-	v18 = v15;
-	*(_DWORD *)(result + 28) = v17;
-	v19 = v17;
-	*(_DWORD *)(result + 32) = *(_DWORD *)(a2 + 32);
-	v20 = *(_DWORD *)(a2 + 36);
-	*(_DWORD *)(result + 36) = v20;
-	v21 = v20;
-	v22 = ~v20;
-	*(_DWORD *)(result + 40) = *(_DWORD *)(a2 + 40);
-	v23 = *(_DWORD *)(a2 + 44);
-	v24 = v21;
-	v25 = v11;
-	*(_DWORD *)(result + 44) = v23;
-	v26 = v23;
-	*(_DWORD *)(result + 48) = *(_DWORD *)(a2 + 48);
-	v27 = *(_DWORD *)(a2 + 52);
-	*(_DWORD *)(result + 52) = v27;
-	v28 = ~v27;
-	v29 = *(_DWORD *)(a2 + 56);
-	v30 = v27;
-	*(_DWORD *)(result + 56) = v29;
-	v31 = v29;
-	v32 = *(_DWORD *)(a2 + 60);
-	*(_DWORD *)(result + 60) = v32;
-	v33 = *(_DWORD *)(a2 + 64);
-	v34 = v32;
-	*(_DWORD *)(result + 64) = v33;
-	v35 = v33;
-	v36 = *(_DWORD *)(a2 + 68);
-	*(_DWORD *)(result + 68) = v36;
-	v37 = *(_DWORD *)(a2 + 72);
-	v38 = v36;
-	v39 = v36 ^ v21;
-	*(_DWORD *)(result + 72) = v37;
-	v40 = *(_DWORD *)(a2 + 76);
-	v41 = v37;
-	v42 = v40 ^ v12;
-	*(_DWORD *)(result + 76) = v40;
-	v43 = v40 & v12;
-	v44 = v40;
-	v45 = v11 & v40;
-	v46 = *(_DWORD *)(a2 + 80);
-	*(_DWORD *)(result + 80) = v46;
-	v47 = *(_DWORD *)(a2 + 84);
-	*(_DWORD *)(result + 84) = v47;
-	v48 = v47 ^ v13;
-	v49 = v13 & ~v47;
-	v50 = *(_DWORD *)(a2 + 88);
-	v51 = ~v13 & v47;
-	v52 = v47 | v13;
-	*(_DWORD *)(result + 88) = v50;
-	v53 = v28 & (v47 ^ v13);
-	v54 = v47 & v13;
-	v55 = v47;
-	v56 = *(_DWORD *)(a2 + 92);
-	v57 = v54;
-	v58 = v28 & v48 ^ v48;
-	*(_DWORD *)(result + 92) = v56;
-	v59 = *(_DWORD *)(a2 + 96);
-	v60 = v48;
-	v61 = ~v56;
-	*(_DWORD *)(result + 96) = v59;
-	v62 = *(_DWORD *)(a2 + 100);
-	v63 = v56;
-	v64 = v13;
-	*(_DWORD *)(result + 100) = v62;
-	v65 = v62;
-	v66 = *(_DWORD *)(a2 + 104);
-	*(_DWORD *)(result + 104) = v66;
-	v67 = *(_DWORD *)(a2 + 108);
-	v68 = *(_DWORD *)(a2 + 108);
-	*(_DWORD *)(result + 108) = v67;
-	v69 = ~v67;
-	v70 = v68 | v12;
-	v71 = v67 & v12;
-	v72 = *(_DWORD *)(a2 + 112);
-	v73 = v45;
-	v74 = v67 & v44 ^ v12;
-	*(_DWORD *)(result + 112) = v72;
-	v75 = v45 ^ (v68 | v12);
-	v76 = *(_DWORD *)(a2 + 116);
-	v77 = (v67 ^ v12) & v44 ^ v67 & v12;
-	v78 = v67 & v44 ^ v67;
-	v79 = v67;
-	v80 = ~v67 & v12 ^ v67 & v44;
-	v81 = v25 & v67;
-	v82 = v12 & ~(v67 & v12);
-	*(_DWORD *)(result + 116) = v76;
-	v83 = v44 & ~v82;
-	v84 = v82 ^ v44 & ~(v67 ^ v12);
-	v85 = *(_DWORD *)(a2 + 120);
-	*(_DWORD *)(result + 120) = v85;
-	v86 = v50 ^ v76;
-	v87 = *(_DWORD *)(a2 + 124);
-	v88 = v19 & v87;
-	v89 = v87 ^ v19;
-	v90 = v67 & v44 ^ (v68 | v12);
-	*(_DWORD *)(result + 124) = v87;
-	v91 = v19 & v87 ^ ~v87;
-	v92 = *(_DWORD *)(a2 + 128);
-	v93 = ~v67 & v44 ^ v12 ^ v59;
-	v94 = v83 ^ v82;
-	*(_DWORD *)(result + 128) = v92;
-	v95 = v42 & v67;
-	v96 = ~v87;
-	v97 = *(_DWORD *)(a2 + 132);
-	v98 = v83 ^ v25 & v67;
-	v99 = v87;
-	v100 = ~v87 & v19 ^ v87;
-	v101 = v25 & v97;
-	*(_DWORD *)(result + 132) = v97;
-	v102 = v97 & v12;
-	v103 = v97 ^ v12;
-	v104 = v97;
-	v105 = *(_DWORD *)(a2 + 136);
-	v106 = ~v97;
-	v107 = ~v97 & v12;
-	v108 = v67 ^ v12 ^ v43;
-	v109 = v92 ^ v19;
-	v110 = v25 & v67 & v44 ^ v67;
-	*(_DWORD *)(result + 136) = v105;
-	v111 = *(_DWORD *)(a2 + 140);
-	*(_DWORD *)(result + 140) = v111;
-	v112 = v111;
-	v113 = *(_DWORD *)(a2 + 144);
-	v114 = v113 ^ v97;
-	*(_DWORD *)(result + 144) = v113;
-	v115 = *(_DWORD *)(a2 + 148);
-	*(_DWORD *)(result + 148) = v115;
-	v116 = *(_DWORD *)(a2 + 152);
-	*(_DWORD *)(result + 152) = v116;
-	v117 = *(_DWORD *)(a2 + 156);
-	v118 = v115;
-	v119 = v106;
-	*(_DWORD *)(result + 156) = v117;
-	v120 = v117;
-	*(_DWORD *)(result + 160) = *(_DWORD *)(a2 + 160);
-	v121 = *(_DWORD *)(a2 + 164);
-	*(_DWORD *)(result + 164) = v121;
-	v122 = v121;
-	v123 = *(_DWORD *)(a2 + 168);
-	v124 = v123 ^ v79;
-	*(_DWORD *)(result + 168) = v123;
-	v125 = *(_DWORD *)(a2 + 172);
-	v126 = ~v115;
-	*(_DWORD *)(result + 172) = v125;
-	v127 = v125;
-	v128 = *(_DWORD *)(a2 + 176);
-	v129 = v108 ^ v128;
-	*(_DWORD *)(result + 176) = v128;
-	v130 = *(_DWORD *)(a2 + 180);
-	*(_DWORD *)(result + 180) = v130;
-	v131 = *(_DWORD *)(a2 + 184);
-	v132 = v130;
-	*(_DWORD *)(result + 184) = v131;
-	v133 = *(_DWORD *)(a2 + 188);
-	v134 = v131;
-	*(_DWORD *)(result + 188) = v133;
-	v135 = *(_DWORD *)(a2 + 192);
-	v136 = v133;
-	*(_DWORD *)(result + 192) = v135;
-	v137 = v135;
-	v138 = *(_DWORD *)(a2 + 196);
-	*(_DWORD *)(result + 196) = v138;
-	v139 = *(_DWORD *)(a2 + 200);
-	v140 = v102 & v138;
-	v141 = v114 ^ v102 & v138;
-	*(_DWORD *)(result + 200) = v139;
-	v142 = *(_DWORD *)(a2 + 204);
-	*(_DWORD *)(result + 204) = v142;
-	v143 = (v138 ^ v106) & v12;
-	v144 = v142;
-	v145 = *(_DWORD *)(a2 + 208);
-	*(_DWORD *)(result + 208) = v145;
-	v146 = v145;
-	v147 = *(_DWORD *)(a2 + 212);
-	*(_DWORD *)(result + 212) = v147;
-	v148 = v147;
-	v149 = *(_DWORD *)(a2 + 216);
-	v150 = v147 ^ v35;
-	*(_DWORD *)(result + 216) = v149;
-	v151 = *(_DWORD *)(a2 + 220);
-	v152 = v149;
-	*(_DWORD *)(result + 220) = v151;
-	v153 = *(_DWORD *)(a2 + 224);
-	v154 = v151;
-	*(_DWORD *)(result + 224) = v153;
-	v155 = v153;
-	v156 = *(_DWORD *)(a2 + 228);
-	*(_DWORD *)(result + 228) = v156;
-	v157 = v74 & v156 ^ v77;
-	v158 = v75 & v156 ^ v81;
-	*(_DWORD *)(result + 232) = *(_DWORD *)(a2 + 232);
-	v159 = v80 & v156 ^ v78;
-	v160 = *(_DWORD *)(a2 + 236);
-	v161 = v73;
-	*(_DWORD *)(result + 236) = v160;
-	v162 = v160;
-	v163 = v124 ^ v156 ^ v161;
-	v164 = v78 & v156 ^ v12;
-	v165 = v156 & ~v84 ^ v77;
-	v166 = v132 & ~(v126 & v132);
-	*(_DWORD *)(result + 240) = *(_DWORD *)(a2 + 240);
-	v167 = v16 & v127;
-	v168 = (v83 ^ v12) & v156 ^ v95;
-	v169 = *(_DWORD *)(a2 + 244);
-	v170 = (v143 | v156) ^ v31;
-	v171 = v150 ^ v166;
-	v172 = v148 | v132;
-	v173 = (v166 ^ (v148 | v132)) & v76;
-	v174 = v96 & v169;
-	*(_DWORD *)(result + 244) = v169;
-	v175 = v169 | v99;
-	v176 = ~v169 & v19;
-	v177 = v169 & v120 & v89 ^ (v169 | v99) & v19;
-	v178 = ~v169;
-	v179 = v169 ^ v99;
-	v180 = *(_DWORD *)(a2 + 248);
-	v181 = ~v169 & v99;
-	*(_DWORD *)(result + 248) = v180;
-	v182 = v180;
-	v183 = *(_DWORD *)(a2 + 252);
-	v184 = v96 & v169 ^ v176 ^ v139 ^ v34 & ~v177 ^ (v19 & ~v181 ^ v169 | v63);
-	v185 = v169;
-	v186 = v19 & ~(v169 ^ v99) ^ v99;
-	v187 = v86 ^ v169;
-	v188 = v169 & v19;
-	v189 = v91 & v169;
-	v190 = v181 ^ v169 & v19;
-	*(_DWORD *)(result + 200) = v184 ^ v120 & ~((v19 & ~v174 ^ v174 | v63) ^ v186);
-	v191 = v169 ^ v72;
-	v192 = v94;
-	v193 = v168 | v112;
-	v194 = v156 & ~v94;
-	v195 = v69 & v12 & v156 ^ v12;
-	v196 = v98 & v156;
-	v197 = v191 ^ v88;
-	v198 = v176 ^ v185;
-	v199 = (~v127 ^ v144) & v64;
-	v200 = v192 ^ v156 & ~(v44 & ~v70 ^ v70 & v25) ^ v116;
-	v201 = v16 & v144;
-	v202 = ~v127 & v64;
-	v203 = ~v148;
-	*(_DWORD *)(result + 532) = v132 ^ v118;
-	v204 = v148;
-	v205 = v148 | v118;
-	v206 = ((v126 & v132 | v204) ^ v118) & ~v76;
-	v207 = v110 ^ v194;
-	v208 = (v16 ^ v144) & v127;
-	v209 = v129 ^ v83 & v156;
-	v210 = v127 & v64;
-	v211 = v208;
-	*(_DWORD *)(result + 112) = v197 ^ (v181 | v63) ^ (v100 ^ v120 & v19 & ~v175) & v34 ^ v120 & ~(v186 ^ v190 & v61);
-	v212 = (v181 | ~v99) & v19;
-	v213 = v109 ^ v181 ^ (v179 ^ v188) & v61 ^ (v63 | ~(v181 & v19)) & v120;
-	v214 = v207 | v112;
-	v215 = v188 & v61 ^ v181 ^ v181 & v19 & v120;
-	v216 = v120 & ~(v198 ^ (v181 & v19 ^ v185) & v61);
-	v217 = ~v65 & v38;
-	v218 = v12 & v138;
-	*(_DWORD *)(result + 128) = v213 ^ v34 & ~v215;
-	v219 = v156 & ~(v25 & v138 ^ v107);
-	v220 = v107 | ~v12;
-	v221 = v220 & v156;
-	v222 = v220 & v138;
-	v223 = v219 ^ v12 ^ v222 ^ (v119 & v138 ^ v101 ^ v221) & v65 | v122;
-	*(_DWORD *)(result + 216) = v179 ^ v19 ^ v152 ^ (v174 | v63) ^ v216 ^ v34 & ~(v212 ^ (v19 ^ v185 | v63) ^ v174 ^ ((v179 ^ v19 | v63) ^ v189) & v120);
-	v224 = v138 & ~(v104 | v12);
-	*(_DWORD *)(result + 144) = v141 ^ (v107 ^ v138) & v156 ^ v65 & ~(v103 & v138 ^ v101 ^ v219) ^ v223;
-	*(_DWORD *)(result + 252) = v183;
-	v225 = v65 & ~(v222 ^ v107);
-	v226 = v65 & ~(v140 ^ v103 ^ (v12 ^ v12 & v138) & v156);
-	*(_DWORD *)(result + 56) = (v224 ^ v107 ^ v219) & v65 ^ v170 ^ v222 ^ v103 ^ ((v103 | v156) ^ v140 ^ v65 & ~(v101 & v138 ^ v156 & ~v103 ^ v103)) & ~v122;
-	v227 = v12 & v138 ^ (v104 | v12);
-	v228 = v156 & ~(v12 & v138 ^ v103) ^ v107 ^ v138 & v107;
-	v229 = v156 & ~((v104 | v12) & v138 ^ v107) ^ v140;
-	v230 = v156 & ~v227 ^ v41;
-	v231 = v201 ^ v127;
-	v232 = v138 & v107 ^ v227 & v156;
-	v233 = v203 & v132 ^ *(_DWORD *)(result + 532);
-	v234 = v232 ^ v103;
-	v235 = v228 & v65;
-	v236 = v203 & v118 ^ v126 & v132;
-	v237 = v126 & v132 & v203 ^ v126 & v132;
-	v238 = v206 ^ v236;
-	v239 = v187 ^ v236;
-	v240 = v118 & ~v132;
-	v241 = v218 ^ v103 ^ v3 ^ v156 & ~v224;
-	v242 = v240 ^ v9 ^ v126 & v132 & v203;
-	v243 = (v55 ^ (v60 | v118)) & v28;
-	v244 = v60 ^ v118;
-	v245 = v226 ^ v156 & ~v101 | v122;
-	v246 = v49 & v126;
-	v247 = ((v49 | v118) ^ v55 | v30) ^ v49 ^ v76 & ~(v51 & ~v126 ^ v53);
-	v248 = v76 & ~(v58 ^ v49 & v126);
-	v249 = v230 ^ v222 ^ v103;
-	v250 = v247;
-	v251 = v159 ^ v157 & ~v112 | v26;
-	v252 = (v205 ^ (v233 | v76)) & v178;
-	v253 = v93 ^ v251;
-	v254 = v132 | v118;
-	v255 = ((v127 ^ v64) & v144 ^ v127) & v69 ^ v202 & v144 ^ v167 ^ v160 & ~((v167 ^ v144 | v79) ^ v202) | v112;
-	v256 = (v233 & v76 ^ (v132 | v118)) & v178 ^ (v126 & v132 & v203 ^ v118) & v76 ^ v171;
-	v257 = (v202 & v144 ^ v127 & v64) & v79;
-	v258 = (v205 ^ v132) & v76;
-	v259 = (v127 & v64 ^ v144) & v69 ^ v18 ^ v167 & v144 ^ v202;
-	v260 = v253 ^ v194;
-	v261 = v76 & ~v205 ^ v172 | v185;
-	v262 = (v158 & ~v112 ^ v164) & ~v26 ^ v163 ^ v165 & ~v112;
-	v263 = (v127 ^ v64 ^ v144 & v64) & v79;
-	v264 = (v127 | v64) & v144;
-	*(_DWORD *)(result + 64) = v256 ^ v19 & ~(v238 ^ (v173 ^ v240 | v185));
-	v265 = v243 ^ (v51 | v118);
-	v266 = (v51 | v118) ^ v52 ^ (v60 ^ (v60 | v118) | v30) ^ (v243 ^ v55) & v76;
-	v267 = (v51 | v118) ^ v57;
-	v268 = (v144 & v64 ^ v167) & v79 ^ v201 ^ v202;
-	v269 = v79 & ~v201;
-	v270 = v265 & v76;
-	v271 = v266 ^ v182;
-	v272 = v55 & ~v51 ^ v246;
-	v273 = ~v65 & v39;
-	v274 = v267 | v30;
-	v275 = (v51 | v118) ^ v55;
-	*(_DWORD *)(result + 528) = v132 & v118;
-	v276 = v118 & v76;
-	v277 = v263 ^ v231;
-	v278 = v268 & v162;
-	v279 = v257 ^ v199;
-	v280 = (v38 | v24 | v65) ^ v38 & v24;
-	*(_DWORD *)(result + 96) = v260 ^ v193;
-	v281 = v71 & ~v156;
-	v282 = v71 & v44 ^ v70;
-	v283 = (v44 ^ v79) & v25 & v156;
-	v284 = v240 & v203;
-	v285 = v240 & v76 ^ v203 & v132;
-	v286 = v156 | v112 | v90;
-	v287 = v203 & *(_DWORD *)(result + 528) ^ *(_DWORD *)(result + 532);
-	v288 = v205;
-	v289 = v276 & (v203 ^ v132);
-	v290 = v132 & v76 ^ v254 ^ v288;
-	v291 = v202 ^ v144 ^ v231 & v79;
-	v292 = v259 ^ v162 & ~(v79 & ~v231 ^ v167 & v144 ^ v202);
-	v293 = v284 ^ v132;
-	v294 = *(_DWORD *)(result + 532) ^ v288 ^ v14 ^ v254 & v76 ^ (v172 ^ v132 ^ v258 | v185);
-	v295 = v24 & ~v65;
-	v296 = v24 & ~v65 ^ v38;
-	*(_DWORD *)(result + 340) = (v65 | v38) ^ v39 ^ (v273 ^ v38) & v104;
-	v297 = ((v38 | v24) & v22 ^ (v65 | v38) ^ (v217 ^ v39) & v104) & v183 ^ *(_DWORD *)(result + 340);
-	v298 = v210 & v144;
-	v299 = (v273 ^ v24) & v119;
-	v300 = v7 & v99;
-	*(_DWORD *)(result + 16) = v294 ^ (v284 & ~v76 ^ v261) & v19;
-	v301 = v210 & v144 & v79;
-	v302 = v237 ^ v287 & v76 ^ v285 & v178;
-	v303 = v76 & ~v293;
-	*(_DWORD *)(result + 24) = v292 ^ v255;
-	v304 = v283 ^ v286 ^ v70;
-	v305 = v264 ^ v202;
-	*(_DWORD *)(result + 248) = v271 ^ (v250 | v162);
-	v306 = v272 | v30;
-	v307 = v275 ^ v274;
-	v308 = (v289 ^ v172) & v178;
-	v309 = ~v167;
-	v310 = ~v167 & v127;
-	*(_DWORD *)(result + 88) = v19 & ~(v290 ^ v252) ^ v239;
-	*(_DWORD *)(result + 328) = v296 ^ v104;
-	*(_DWORD *)(result + 324) = *(_DWORD *)(result + 328) ^ v183 & ~(v38 & v24 & v65 & v119 ^ v217 ^ v39);
-	*(_DWORD *)(result + 264) = (v297 | v6) ^ *(_DWORD *)(result + 324);
-	v311 = v241 ^ v245;
-	v312 = v202 & v144 ^ v167 ^ v269 ^ v134;
-	v313 = (v144 & ~v202 ^ v202) & v79 ^ v202 ^ v162 & ~v291;
-	v314 = v244 ^ v270 ^ v306;
-	v315 = ~*(_DWORD *)(result + 64);
-	v316 = v315 & *(_DWORD *)(result + 248);
-	v317 = v307 ^ v248;
-	v318 = v242 ^ v303 ^ v308;
-	v319 = v310 ^ v144 & ~v202;
-	v320 = v19 & ~v302;
-	v321 = ~*(_DWORD *)(result + 24);
-	v322 = (v144 & v127 ^ v210) & v79;
-	v323 = (v196 ^ v282) & ~v112;
-	v324 = *(_DWORD *)(result + 88);
-	v325 = *(_DWORD *)(result + 88) | *(_DWORD *)(result + 24);
-	v326 = v321 & v324;
-	v327 = v324 & *(_DWORD *)(result + 24);
-	v328 = v298 ^ v127;
-	v329 = *(_DWORD *)(result + 96);
-	*(_DWORD *)(result + 372) = *(_DWORD *)(result + 64) | *(_DWORD *)(result + 248);
-	v330 = v329 | *(_DWORD *)(result + 248);
-	v331 = *(_DWORD *)(result + 328) ^ v85;
-	v332 = v7 & v136;
-	v333 = *(_DWORD *)(result + 264) ^ v66;
-	v334 = v235 ^ v234 | v122;
-	v335 = v311 ^ v225;
-	v336 = ~*(_DWORD *)(result + 96);
-	v337 = v195 & ~v112 ^ v281 | v26;
-	v338 = v312 ^ v305 & v162;
-	v339 = *(_DWORD *)(result + 248) & ~v316;
-	*(_DWORD *)(result + 8) = v318 ^ v320;
-	v340 = v314 ^ v105;
-	v341 = v319 ^ v322;
-	v342 = (v304 | v26) ^ v200 ^ v323;
-	v343 = v341;
-	v344 = v325 & v321;
-	v345 = v321 & *(_DWORD *)(result + 56);
-	v346 = *(_DWORD *)(result + 24) & ~v327;
-	v347 = *(_DWORD *)(result + 56);
-	v348 = *(_DWORD *)(result + 24) & v347;
-	v349 = v321 & v324 & v347;
-	v350 = *(_DWORD *)(result + 372);
-	v351 = *(_DWORD *)(result + 88) ^ *(_DWORD *)(result + 24);
-	v352 = ~*(_DWORD *)(result + 88);
-	v353 = *(_DWORD *)(result + 56);
-	*(_DWORD *)(result + 224) = v162 & ~v301 ^ v155 ^ v277 ^ (v278 ^ v279 | v112);
-	v354 = v352 & v353;
-	v355 = v309;
-	v356 = v350 | *(_DWORD *)(result + 96);
-	v357 = *(_DWORD *)(result + 248);
-	v358 = *(_DWORD *)(result + 64) & ~v357;
-	v359 = v357 ^ v330;
-	*(_DWORD *)(result + 392) = v316 & v336;
-	*(_DWORD *)(result + 72) = v249 ^ v65 & ~v229 ^ v334;
-	*(_DWORD *)(result + 184) = v338 ^ (v313 | v112);
-	v360 = v339 ^ *(_DWORD *)(result + 96);
-	v361 = *(_DWORD *)(result + 64) & v336;
-	*(_DWORD *)(result + 136) = v340 ^ v162 & ~v317;
-	v362 = v317 & ~v162;
-	v363 = v345 ^ *(_DWORD *)(result + 88);
-	v364 = v326 ^ v345;
-	v365 = v327 ^ *(_DWORD *)(result + 56);
-	v366 = v326 ^ v348;
-	v367 = v352 & *(_DWORD *)(result + 24);
-	v368 = v328 & v79 ^ v211;
-	v369 = (v349 ^ *(_DWORD *)(result + 88)) & v342;
-	v370 = v343 | v112;
-	v371 = v325 & *(_DWORD *)(result + 56);
-	v372 = (v336 | ~v357) & v335;
-	v373 = v46 ^ v305 ^ v355 & v79;
-	v374 = v335 & ~v359;
-	v375 = *(_DWORD *)(result + 56);
-	v376 = v22 & ~v65;
-	v377 = ~*(_DWORD *)(result + 144);
-	v378 = ~(v7 & v99);
-	*(_DWORD *)(result + 464) = v377 & *(_DWORD *)(result + 112);
-	*(_DWORD *)(result + 176) = v209 ^ v337 ^ v214;
-	v379 = v360 & ~v335;
-	v380 = v315 & v335;
-	v381 = v361 ^ *(_DWORD *)(result + 248);
-	v382 = *(_DWORD *)(result + 144);
-	*(_DWORD *)(result + 316) = v335 & ~*(_DWORD *)(result + 184);
-	v383 = v382 ^ *(_DWORD *)(result + 112);
-	v384 = *(_DWORD *)(result + 72);
-	*(_DWORD *)(result + 376) = v383;
-	*(_DWORD *)(result + 516) = v384 & ~*(_DWORD *)(result + 136);
-	v385 = v314 ^ v362;
-	v386 = v369;
-	v387 = ~v344 & *(_DWORD *)(result + 56);
-	v388 = v346 ^ v345 | v342;
-	v389 = v371 ^ *(_DWORD *)(result + 24);
-	v390 = v345 ^ v325;
-	v391 = v345 & v342;
-	v392 = v375 & v342 & v351;
-	v393 = v250 & v162;
-	v394 = (v354 ^ v351) & v342;
-	v395 = v354 ^ *(_DWORD *)(result + 88);
-	v396 = v367 ^ *(_DWORD *)(result + 56);
-	v397 = v162 & ~v368;
-	v398 = v358 | *(_DWORD *)(result + 96);
-	v399 = v373 ^ v370;
-	v400 = *(_DWORD *)(result + 372) & v336 ^ v358;
-	v401 = v335 & ~(*(_DWORD *)(result + 64) ^ v356);
-	v402 = *(_DWORD *)(result + 372) ^ v356;
-	*(_DWORD *)(result + 536) = *(_DWORD *)(result + 96) ^ *(_DWORD *)(result + 248);
-	v403 = *(_DWORD *)(result + 372) ^ v374;
-	v404 = v99 & v378;
-	v405 = v6 ^ v378 & v136;
-	*(_DWORD *)(result + 432) = *(_DWORD *)(result + 96) ^ v336 & v335;
-	v406 = v336 & v335 ^ *(_DWORD *)(result + 372);
-	v407 = *(_DWORD *)(result + 144);
-	*(_DWORD *)(result + 496) = *(_DWORD *)(result + 112) & ~*(_DWORD *)(result + 464);
-	*(_DWORD *)(result + 400) = *(_DWORD *)(result + 176) | v407;
-	*(_DWORD *)(result + 720) = ~v335 & *(_DWORD *)(result + 184);
-	*(_DWORD *)(result + 724) = v381 ^ v380;
-	v408 = *(_DWORD *)(result + 316);
-	*(_DWORD *)(result + 192) = v385 ^ v137;
-	*(_DWORD *)(result + 712) = v335 & ~v408;
-	v409 = *(_DWORD *)(result + 184);
-	*(_DWORD *)(result + 296) = *(_DWORD *)(result + 184) | v335;
-	v410 = v409 ^ v335;
-	v411 = *(_DWORD *)(result + 184);
-	*(_DWORD *)(result + 684) = v410;
-	v412 = v411 & v335;
-	v413 = *(_DWORD *)(result + 136);
-	*(_DWORD *)(result + 688) = v412;
-	v414 = v413 | *(_DWORD *)(result + 72);
-	v415 = *(_DWORD *)(result + 144);
-	*(_DWORD *)(result + 700) = v414;
-	v416 = v415 | *(_DWORD *)(result + 112);
-	v417 = *(_DWORD *)(result + 144);
-	*(_DWORD *)(result + 256) = v416;
-	v418 = v417 & ~*(_DWORD *)(result + 112);
-	v419 = *(_DWORD *)(result + 144);
-	*(_DWORD *)(result + 504) = v418;
-	*(_DWORD *)(result + 396) = v419 & *(_DWORD *)(result + 112);
-	v420 = *(_DWORD *)(result + 96);
-	v421 = v339 | v420;
-	*(_DWORD *)(result + 544) = v363 & v342 ^ *(_DWORD *)(result + 88);
-	*(_DWORD *)(result + 436) = ~v344 & v342 ^ v363;
-	*(_DWORD *)(result + 696) = v346 ^ v342 ^ v387;
-	v422 = v316 | v420;
-	v423 = (v339 | v420) ^ v316;
-	v424 = *(_DWORD *)(result + 392);
-	*(_DWORD *)(result + 576) = v423;
-	*(_DWORD *)(result + 692) = v388 ^ v344;
-	v425 = v421;
-	v426 = v335 & ~(v424 ^ *(_DWORD *)(result + 64));
-	v427 = *(_DWORD *)(result + 64);
-	*(_DWORD *)(result + 308) = v364 & ~v342 ^ v366;
-	*(_DWORD *)(result + 388) = v349 ^ v327;
-	v428 = (v427 ^ *(_DWORD *)(result + 248)) & ~v336;
-	*(_DWORD *)(result + 416) = v389 ^ v386;
-	*(_DWORD *)(result + 312) = v342 & ~v390;
-	v429 = *(_DWORD *)(result + 24);
-	*(_DWORD *)(result + 508) = v366 ^ v391;
-	v430 = v429 & ~v342;
-	v431 = *(_DWORD *)(result + 88);
-	*(_DWORD *)(result + 276) = v430 ^ v348;
-	v432 = v348 ^ v431;
-	v433 = *(_DWORD *)(result + 64);
-	*(_DWORD *)(result + 632) = v366 & v342 ^ v432;
-	v434 = *(_DWORD *)(result + 248);
-	*(_DWORD *)(result + 408) = ~v342 & v365 ^ v432;
-	*(_DWORD *)(result + 468) = v392 ^ v432;
-	*(_DWORD *)(result + 664) = v422 ^ v433 & v434;
-	*(_DWORD *)(result + 624) = v433 & v434;
-	v435 = *(_DWORD *)(result + 64);
-	*(_DWORD *)(result + 208) = v266 ^ v146 ^ v393;
-	v436 = v435 & ~v335;
-	v437 = *(_DWORD *)(result + 16);
-	*(_DWORD *)(result + 520) = v395 ^ v394;
-	*(_DWORD *)(result + 480) = v396 & v342;
-	v438 = v377 & v437;
-	v439 = *(_DWORD *)(result + 376);
-	*(_DWORD *)(result + 736) = v438;
-	*(_DWORD *)(result + 428) = v439 | *(_DWORD *)(result + 176);
-	*(_DWORD *)(result + 80) = v399 ^ v397;
-	v440 = *(_DWORD *)(result + 96);
-	*(_DWORD *)(result + 424) = v406 ^ v398;
-	v441 = v436 ^ v440;
-	v442 = *(_DWORD *)(result + 248);
-	*(_DWORD *)(result + 732) = v441;
-	v443 = v442;
-	*(_DWORD *)(result + 672) = v401 ^ v442;
-	v444 = *(_DWORD *)(result + 536);
-	*(_DWORD *)(result + 676) = v402 & ~v335;
-	*(_DWORD *)(result + 680) = v379 ^ *(_DWORD *)(result + 536);
-	v445 = *(_DWORD *)(result + 536);
-	*(_DWORD *)(result + 548) = v372 ^ v398 ^ v339;
-	*(_DWORD *)(result + 484) = v372 ^ v443;
-	*(_DWORD *)(result + 636) = v400 ^ v372;
-	v446 = v400 ^ (v444 | v335);
-	v447 = *(_DWORD *)(result + 372) & v335;
-	v448 = v335 & ~v445;
-	v449 = *(_DWORD *)(result + 576);
-	*(_DWORD *)(result + 552) = v446;
-	*(_DWORD *)(result + 412) = v403 ^ v425;
-	v450 = v449 ^ v447;
-	v451 = *(_DWORD *)(result + 664);
-	*(_DWORD *)(result + 716) = v450;
-	*(_DWORD *)(result + 556) = v428 ^ v426;
-	*(_DWORD *)(result + 652) = v451 ^ v448;
-	*(_DWORD *)(result + 332) = v296 & v104 ^ v39 ^ (v38 & v24 | v65);
-	*(_DWORD *)(result + 348) = v376 & v38 ^ v104 & ~v273;
-	v452 = v404;
-	*(_DWORD *)(result + 120) = ((v65 | v24) ^ v39 ^ v280 & v104) & ~v183 ^ v331 ^ ((v299 ^ v65 ^ v24) & ~v183 ^ *(_DWORD *)(result + 340) | v6);
-	v453 = v136 & ~v404;
-	v454 = v154 & ~(v453 ^ v452);
-	v455 = v405;
-	v456 = v154 & ~(v300 & v136 ^ v99) ^ v405 | v183;
-	v457 = *(_DWORD *)(result + 200) | v262;
-	v458 = v262 | *(_DWORD *)(result + 16);
-	*(_DWORD *)(result + 352) = v104 & ~v296 ^ v24;
-	v459 = v99 & v6;
-	v460 = v96 & v6;
-	v461 = v136 & v96 ^ v6;
-	v462 = v104 & ~v295;
-	v463 = v99 | v6;
-	*(_DWORD *)(result + 272) = v299 ^ v295;
-	v464 = v453 ^ (v99 | v6);
-	*(_DWORD *)(result + 360) = (v217 ^ v38) & v104 ^ v65 ^ v24;
-	v465 = ((v99 ^ v6) & v136 ^ v96 & v6) & v154;
-	*(_DWORD *)(result + 356) = v104 & ~v280 ^ v280;
-	*(_DWORD *)(result + 260) = v38 & ~v104;
-	v466 = *(_DWORD *)(result + 200);
-	v467 = v262 & ~v466;
-	v468 = *(_DWORD *)(result + 200) ^ v262;
-	v469 = *(_DWORD *)(result + 200) & ~v262;
-	*(_DWORD *)(result + 268) = v462 ^ v38;
-	*(_DWORD *)(result + 152) = v342;
-	v470 = (v454 ^ v332 ^ v6) & ~v183;
-	*(_DWORD *)result = v335;
-	v471 = v136 & v99 & v6;
-	v472 = v471 ^ v300;
-	*(_DWORD *)(result + 572) = v332 ^ v6;
-	v473 = v136 & ~(v99 ^ v6);
-	v474 = (v136 & ~(v99 | v6) ^ v99 ^ v6) & v154;
-	v475 = v455 ^ v154 & ~(v99 & v6);
-	v476 = v472 & ~v154;
-	v477 = v136 & v99;
-	v478 = *(_DWORD *)(result + 16);
-	*(_DWORD *)(result + 472) = v475;
-	v479 = (v96 & v6 & v136 ^ v99 & v6) & v154;
-	v480 = v262 & ~v467 | v478;
-	v481 = v478;
-	v482 = *(_DWORD *)(result + 200);
-	v483 = (v457 ^ v458) & v333 ^ v466 ^ v480;
-	v484 = ~v481;
-	v485 = v469 | v481;
-	*(_DWORD *)(result + 168) = v262;
-	v486 = v457 | v481;
-	v487 = v482 | v481;
-	v488 = v468 & ~v481 ^ v262;
-	v489 = (v467 | v481) ^ v262;
-	v490 = v468 & ~v481 ^ v467 | v333;
-	v491 = v332 ^ v99 & v6;
-	v492 = v490;
-	*(_DWORD *)(result + 728) = v172;
-	v493 = v332 ^ v96 & v6;
-	v494 = v473 ^ v6;
-	*(_DWORD *)(result + 616) = v136 & v6;
-	v495 = v473 ^ v96 & v6;
-	*(_DWORD *)(result + 448) = v96 & v6 & v154 ^ v136 & v6;
-	v496 = v99 | v6 | v154;
-	*(_DWORD *)(result + 604) = v464;
-	v497 = v136;
-	v498 = v491 & v154;
-	v499 = v463 & v136 ^ v99;
-	*(_DWORD *)(result + 440) = v491 ^ v496;
-	v500 = v136 & ~v460;
-	v501 = v471 ^ v99;
-	v502 = v99 ^ v136;
-	v503 = v471 ^ v459;
-	v504 = v99 ^ v497;
-	v505 = v154;
-	v506 = v499;
-	v507 = v465 ^ v504;
-	*(_DWORD *)(result + 608) = v495;
-	v508 = v154 & ~v501 ^ v495;
-	v509 = v459 & v154;
-	v510 = v459 ^ v477 ^ v154;
-	v511 = v459 & v505 ^ v460;
-	*(_DWORD *)(result + 592) = v508;
-	v512 = v336;
-	v513 = v336 & *(_DWORD *)(result + 248);
-	v514 = *(_DWORD *)(result + 8);
-	*(_DWORD *)(result + 460) = v494 ^ v474;
-	v515 = v514 & *(_DWORD *)(result + 224);
-	v516 = *(_DWORD *)(result + 120);
-	*(_DWORD *)(result + 740) = v515;
-	v517 = v335 & ~v513;
-	v518 = v335 & ~v516;
-	v519 = *(_DWORD *)(result + 740);
-	*(_DWORD *)(result + 492) = v518;
-	v520 = v519 & ~v512;
-	v521 = v262;
-	v522 = v262 & v484;
-	v523 = v333 & ~(v469 & v484);
-	*(_DWORD *)(result + 452) = v506;
-	*(_DWORD *)(result + 580) = v464 ^ v509;
-	v524 = (v468 ^ v458) & v333;
-	v525 = v469 ^ v458;
-	v526 = v520;
-	v527 = v469 ^ *(_DWORD *)(result + 16);
-	*(_DWORD *)(result + 748) = v525;
-	v528 = (v486 ^ v521) & v333;
-	*(_DWORD *)(result + 644) = v485 ^ v457;
-	v529 = (v485 ^ v521) & v333;
-	v530 = v487 ^ v468;
-	v531 = v487 ^ *(_DWORD *)(result + 200);
-	v532 = *(_DWORD *)(result + 16);
-	*(_DWORD *)(result + 600) = v511 ^ v500;
-	*(_DWORD *)(result + 560) = v507;
-	v533 = *(_DWORD *)(result + 200);
-	v534 = v468 ^ v532;
-	v535 = (v532 | v468) ^ v533;
-	v536 = v522 & v533;
-	*(_DWORD *)(result + 292) = v522 ^ v533;
-	*(_DWORD *)(result + 568) = v461 ^ v505 & ~v503;
-	*(_DWORD *)(result + 584) = v503 & v505 ^ v506;
-	*(_DWORD *)(result + 596) = v502 ^ v476;
-	*(_DWORD *)(result + 564) = v493 ^ v479;
-	*(_DWORD *)(result + 612) = v470 ^ v507;
-	*(_DWORD *)(result + 588) = v510;
-	*(_DWORD *)(result + 456) = v456 ^ v510;
-	*(_DWORD *)(result + 444) = v498 ^ v477;
-	v537 = *(_DWORD *)(result + 392);
-	*(_DWORD *)(result + 304) = *(_DWORD *)(result + 516) | v333;
-	v538 = v537 ^ v517;
-	v539 = *(_DWORD *)(result + 492);
-	v540 = *(_DWORD *)(result + 216);
-	*(_DWORD *)(result + 640) = v538;
-	*(_DWORD *)(result + 336) = v539 & v540;
-	*(_DWORD *)(result + 500) = v483 | *(_DWORD *)(result + 136);
-	v541 = v526 ^ *(_DWORD *)(result + 224);
-	v542 = *(_DWORD *)(result + 8) & ~*(_DWORD *)(result + 224);
-	*(_DWORD *)(result + 704) = v524 ^ v534;
-	v543 = v529 ^ *(_DWORD *)(result + 200);
-	*(_DWORD *)(result + 540) = *(_DWORD *)(result + 644) ^ v530 & v333;
-	v544 = *(_DWORD *)(result + 516);
-	*(_DWORD *)(result + 420) = v527 ^ v333 & ~v531;
-	*(_DWORD *)(result + 300) = v544;
-	*(_DWORD *)(result + 380) = v492 ^ v489;
-	*(_DWORD *)(result + 280) = v523 ^ v489;
-	*(_DWORD *)(result + 512) = *(_DWORD *)(result + 700);
-	*(_DWORD *)(result + 628) = v528 ^ *(_DWORD *)(result + 748);
-	v545 = *(_DWORD *)(result + 700);
-	*(_DWORD *)(result + 284) = v542;
-	*(_DWORD *)(result + 668) = v536 ^ v457;
-	*(_DWORD *)(result + 708) = v545;
-	v546 = *(_DWORD *)(result + 200);
-	*(_DWORD *)(result + 288) = v534;
-	v547 = *(_DWORD *)(result + 256);
-	*(_DWORD *)(result + 660) = v543;
-	*(_DWORD *)(result + 648) = v547;
-	*(_DWORD *)(result + 104) = v333;
-	v548 = *(_DWORD *)(result + 504);
-	*(_DWORD *)(result + 384) = v528 ^ v546;
-	*(_DWORD *)(result + 488) = v333 & ~v486;
-	*(_DWORD *)(result + 404) = v548;
-	v549 = *(_DWORD *)(result + 256);
-	*(_DWORD *)(result + 344) = v488 & ~v333 ^ v530;
-	*(_DWORD *)(result + 476) = v333 & ~v488 ^ v535;
-	*(_DWORD *)(result + 656) = v549;
-	*(_DWORD *)(result + 368) = v489 & v333 ^ v530;
-	v550 = *(_DWORD *)(result + 292) ^ v333 & ~v530;
-	*(_DWORD *)(result + 364) = *(_DWORD *)(result + 504);
-	*(_DWORD *)(result + 320) = v541;
-	v551 = *(_DWORD *)(result + 740);
-	*(_DWORD *)(result + 524) = v551;
-	*(_DWORD *)(result + 744) = v551;
-	*(_DWORD *)(result + 620) = v550;
-	return result;
+	_DWORD v[550]; // tmp buffer of 2200 bytes / 550 _DWORD
+
+	v[0] = a2[0];
+	result[0] = a2[0];
+	v[1] = v[0];
+	v[2] = a2[1];
+	result[1] = v[2];
+	v[3] = a2[2];
+	v[4] = v[2];
+	v[5] = ~v[2];
+	result[2] = v[3];
+	v[6] = a2[3];
+	v[7] = v[3];
+	result[3] = v[6];
+	v[8] = a2[4];
+	v[9] = ~v[6];
+	v[10] = v[6];
+	result[4] = v[8];
+	v[11] = a2[5];
+	v[12] = v[8];
+	result[5] = v[11];
+	v[13] = a2[6];
+	v[14] = ~v[11];
+	result[6] = v[13];
+	v[15] = a2[7];
+	v[16] = v[13];
+	result[7] = v[15];
+	v[17] = v[15];
+	result[8] = a2[8];
+	v[18] = a2[9];
+	result[9] = v[18];
+	v[19] = v[18];
+	v[20] = ~v[18];
+	result[10] = a2[10];
+	v[21] = a2[11];
+	v[22] = v[19];
+	v[23] = v[9];
+	result[11] = v[21];
+	v[24] = v[21];
+	result[12] = a2[12];
+	v[25] = a2[13];
+	result[13] = v[25];
+	v[26] = ~v[25];
+	v[27] = a2[14];
+	v[28] = v[25];
+	result[14] = v[27];
+	v[29] = v[27];
+	v[30] = a2[15];
+	result[15] = v[30];
+	v[31] = a2[16];
+	v[32] = v[30];
+	result[16] = v[31];
+	v[33] = v[31];
+	v[34] = a2[17];
+	result[17] = v[34];
+	v[35] = a2[18];
+	v[36] = v[34];
+	v[37] = v[34] ^ v[19];
+	result[18] = v[35];
+	v[38] = a2[19];
+	v[39] = v[35];
+	v[40] = v[38] ^ v[10];
+	result[19] = v[38];
+	v[41] = v[38] & v[10];
+	v[42] = v[38];
+	v[43] = v[9] & v[38];
+	v[44] = a2[20];
+	result[20] = v[44];
+	v[45] = a2[21];
+	result[21] = v[45];
+	v[46] = v[45] ^ v[11];
+	v[47] = v[11] & ~v[45];
+	v[48] = a2[22];
+	v[49] = ~v[11] & v[45];
+	v[50] = v[45] | v[11];
+	result[22] = v[48];
+	v[51] = v[26] & (v[45] ^ v[11]);
+	v[52] = v[45] & v[11];
+	v[53] = v[45];
+	v[54] = a2[23];
+	v[55] = v[52];
+	v[56] = v[26] & v[46] ^ v[46];
+	result[23] = v[54];
+	v[57] = a2[24];
+	v[58] = v[46];
+	v[59] = ~v[54];
+	result[24] = v[57];
+	v[60] = a2[25];
+	v[61] = v[54];
+	v[62] = v[11];
+	result[25] = v[60];
+	v[63] = v[60];
+	v[64] = a2[26];
+	result[26] = v[64];
+	v[65] = a2[27];
+	v[66] = a2[27];
+	result[27] = v[65];
+	v[67] = ~v[65];
+	v[68] = v[66] | v[10];
+	v[69] = v[65] & v[10];
+	v[70] = a2[28];
+	v[71] = v[43];
+	v[72] = v[65] & v[42] ^ v[10];
+	result[28] = v[70];
+	v[73] = v[43] ^ (v[66] | v[10]);
+	v[74] = a2[29];
+	v[75] = (v[65] ^ v[10]) & v[42] ^ v[65] & v[10];
+	v[76] = v[65] & v[42] ^ v[65];
+	v[77] = v[65];
+	v[78] = ~v[65] & v[10] ^ v[65] & v[42];
+	v[79] = v[23] & v[65];
+	v[80] = v[10] & ~(v[65] & v[10]);
+	result[29] = v[74];
+	v[81] = v[42] & ~v[80];
+	v[82] = v[80] ^ v[42] & ~(v[65] ^ v[10]);
+	v[83] = a2[30];
+	result[30] = v[83];
+	v[84] = v[48] ^ v[74];
+	v[85] = a2[31];
+	v[86] = v[17] & v[85];
+	v[87] = v[85] ^ v[17];
+	v[88] = v[65] & v[42] ^ (v[66] | v[10]);
+	result[31] = v[85];
+	v[89] = v[17] & v[85] ^ ~v[85];
+	v[90] = a2[32];
+	v[91] = ~v[65] & v[42] ^ v[10] ^ v[57];
+	v[92] = v[81] ^ v[80];
+	result[32] = v[90];
+	v[93] = v[40] & v[65];
+	v[94] = ~v[85];
+	v[95] = a2[33];
+	v[96] = v[81] ^ v[23] & v[65];
+	v[97] = v[85];
+	v[98] = ~v[85] & v[17] ^ v[85];
+	v[99] = v[23] & v[95];
+	result[33] = v[95];
+	v[100] = v[95] & v[10];
+	v[101] = v[95] ^ v[10];
+	v[102] = v[95];
+	v[103] = a2[34];
+	v[104] = ~v[95];
+	v[105] = ~v[95] & v[10];
+	v[106] = v[65] ^ v[10] ^ v[41];
+	v[107] = v[90] ^ v[17];
+	v[108] = v[23] & v[65] & v[42] ^ v[65];
+	result[34] = v[103];
+	v[109] = a2[35];
+	result[35] = v[109];
+	v[110] = v[109];
+	v[111] = a2[36];
+	v[112] = v[111] ^ v[95];
+	result[36] = v[111];
+	v[113] = a2[37];
+	result[37] = v[113];
+	v[114] = a2[38];
+	result[38] = v[114];
+	v[115] = a2[39];
+	v[116] = v[113];
+	v[117] = v[104];
+	result[39] = v[115];
+	v[118] = v[115];
+	result[40] = a2[40];
+	v[119] = a2[41];
+	result[41] = v[119];
+	v[120] = v[119];
+	v[121] = a2[42];
+	v[122] = v[121] ^ v[77];
+	result[42] = v[121];
+	v[123] = a2[43];
+	v[124] = ~v[113];
+	result[43] = v[123];
+	v[125] = v[123];
+	v[126] = a2[44];
+	v[127] = v[106] ^ v[126];
+	result[44] = v[126];
+	v[128] = a2[45];
+	result[45] = v[128];
+	v[129] = a2[46];
+	v[130] = v[128];
+	result[46] = v[129];
+	v[131] = a2[47];
+	v[132] = v[129];
+	result[47] = v[131];
+	v[133] = a2[48];
+	v[134] = v[131];
+	result[48] = v[133];
+	v[135] = v[133];
+	v[136] = a2[49];
+	result[49] = v[136];
+	v[137] = a2[50];
+	v[138] = v[100] & v[136];
+	v[139] = v[112] ^ v[100] & v[136];
+	result[50] = v[137];
+	v[140] = a2[51];
+	result[51] = v[140];
+	v[141] = (v[136] ^ v[104]) & v[10];
+	v[142] = v[140];
+	v[143] = a2[52];
+	result[52] = v[143];
+	v[144] = v[143];
+	v[145] = a2[53];
+	result[53] = v[145];
+	v[146] = v[145];
+	v[147] = a2[54];
+	v[148] = v[145] ^ v[33];
+	result[54] = v[147];
+	v[149] = a2[55];
+	v[150] = v[147];
+	result[55] = v[149];
+	v[151] = a2[56];
+	v[152] = v[149];
+	result[56] = v[151];
+	v[153] = v[151];
+	v[154] = a2[57];
+	result[57] = v[154];
+	v[155] = v[72] & v[154] ^ v[75];
+	v[156] = v[73] & v[154] ^ v[79];
+	result[58] = a2[58];
+	v[157] = v[78] & v[154] ^ v[76];
+	v[158] = a2[59];
+	v[159] = v[71];
+	result[59] = v[158];
+	v[160] = v[158];
+	v[161] = v[122] ^ v[154] ^ v[159];
+	v[162] = v[76] & v[154] ^ v[10];
+	v[163] = v[154] & ~v[82] ^ v[75];
+	v[164] = v[130] & ~(v[124] & v[130]);
+	result[60] = a2[60];
+	v[165] = v[14] & v[125];
+	v[166] = (v[81] ^ v[10]) & v[154] ^ v[93];
+	v[167] = a2[61];
+	v[168] = (v[141] | v[154]) ^ v[29];
+	v[169] = v[148] ^ v[164];
+	v[170] = v[146] | v[130];
+	v[171] = (v[164] ^ (v[146] | v[130])) & v[74];
+	v[172] = v[94] & v[167];
+	result[61] = v[167];
+	v[173] = v[167] | v[97];
+	v[174] = ~v[167] & v[17];
+	v[175] = v[167] & v[118] & v[87] ^ (v[167] | v[97]) & v[17];
+	v[176] = ~v[167];
+	v[177] = v[167] ^ v[97];
+	v[178] = a2[62];
+	v[179] = ~v[167] & v[97];
+	result[62] = v[178];
+	v[180] = v[178];
+	v[181] = a2[63];
+	v[182] = v[94] & v[167] ^ v[174] ^ v[137] ^ v[32] & ~v[175] ^ (v[17] & ~v[179] ^ v[167] | v[61]);
+	v[183] = v[167];
+	v[184] = v[17] & ~(v[167] ^ v[97]) ^ v[97];
+	v[185] = v[84] ^ v[167];
+	v[186] = v[167] & v[17];
+	v[187] = v[89] & v[167];
+	v[188] = v[179] ^ v[167] & v[17];
+	result[50] = v[182] ^ v[118] & ~((v[17] & ~v[172] ^ v[172] | v[61]) ^ v[184]);
+	v[189] = v[167] ^ v[70];
+	v[190] = v[92];
+	v[191] = v[166] | v[110];
+	v[192] = v[154] & ~v[92];
+	v[193] = v[67] & v[10] & v[154] ^ v[10];
+	v[194] = v[96] & v[154];
+	v[195] = v[189] ^ v[86];
+	v[196] = v[174] ^ v[183];
+	v[197] = (~v[125] ^ v[142]) & v[62];
+	v[198] = v[190] ^ v[154] & ~(v[42] & ~v[68] ^ v[68] & v[23]) ^ v[114];
+	v[199] = v[14] & v[142];
+	v[200] = ~v[125] & v[62];
+	v[201] = ~v[146];
+	result[133] = v[130] ^ v[116];
+	v[202] = v[146];
+	v[203] = v[146] | v[116];
+	v[204] = ((v[124] & v[130] | v[202]) ^ v[116]) & ~v[74];
+	v[205] = v[108] ^ v[192];
+	v[206] = (v[14] ^ v[142]) & v[125];
+	v[207] = v[127] ^ v[81] & v[154];
+	v[208] = v[125] & v[62];
+	v[209] = v[206];
+	result[28] = v[195] ^ (v[179] | v[61]) ^ (v[98] ^ v[118] & v[17] & ~v[173]) & v[32] ^ v[118] & ~(v[184] ^ v[188] & v[59]);
+	v[210] = (v[179] | ~v[97]) & v[17];
+	v[211] = v[107] ^ v[179] ^ (v[177] ^ v[186]) & v[59] ^ (v[61] | ~(v[179] & v[17])) & v[118];
+	v[212] = v[205] | v[110];
+	v[213] = v[186] & v[59] ^ v[179] ^ v[179] & v[17] & v[118];
+	v[214] = v[118] & ~(v[196] ^ (v[179] & v[17] ^ v[183]) & v[59]);
+	v[215] = ~v[63] & v[36];
+	v[216] = v[10] & v[136];
+	result[32] = v[211] ^ v[32] & ~v[213];
+	v[217] = v[154] & ~(v[23] & v[136] ^ v[105]);
+	v[218] = v[105] | ~v[10];
+	v[219] = v[218] & v[154];
+	v[220] = v[218] & v[136];
+	v[221] = v[217] ^ v[10] ^ v[220] ^ (v[117] & v[136] ^ v[99] ^ v[219]) & v[63] | v[120];
+	result[54] = v[177] ^ v[17] ^ v[150] ^ (v[172] | v[61]) ^ v[214] ^ v[32] & ~(v[210] ^ (v[17] ^ v[183] | v[61]) ^ v[172] ^ ((v[177] ^ v[17] | v[61]) ^ v[187]) & v[118]);
+	v[222] = v[136] & ~(v[102] | v[10]);
+	result[36] = v[139] ^ (v[105] ^ v[136]) & v[154] ^ v[63] & ~(v[101] & v[136] ^ v[99] ^ v[217]) ^ v[221];
+	result[63] = v[181];
+	v[223] = v[63] & ~(v[220] ^ v[105]);
+	v[224] = v[63] & ~(v[138] ^ v[101] ^ (v[10] ^ v[10] & v[136]) & v[154]);
+	result[14] = (v[222] ^ v[105] ^ v[217]) & v[63] ^ v[168] ^ v[220] ^ v[101] ^ ((v[101] | v[154]) ^ v[138] ^ v[63] & ~(v[99] & v[136] ^ v[154] & ~v[101] ^ v[101])) & ~v[120];
+	v[225] = v[10] & v[136] ^ (v[102] | v[10]);
+	v[226] = v[154] & ~(v[10] & v[136] ^ v[101]) ^ v[105] ^ v[136] & v[105];
+	v[227] = v[154] & ~((v[102] | v[10]) & v[136] ^ v[105]) ^ v[138];
+	v[228] = v[154] & ~v[225] ^ v[39];
+	v[229] = v[199] ^ v[125];
+	v[230] = v[136] & v[105] ^ v[225] & v[154];
+	v[231] = v[201] & v[130] ^ result[133];
+	v[232] = v[230] ^ v[101];
+	v[233] = v[226] & v[63];
+	v[234] = v[201] & v[116] ^ v[124] & v[130];
+	v[235] = v[124] & v[130] & v[201] ^ v[124] & v[130];
+	v[236] = v[204] ^ v[234];
+	v[237] = v[185] ^ v[234];
+	v[238] = v[116] & ~v[130];
+	v[239] = v[216] ^ v[101] ^ v[1] ^ v[154] & ~v[222];
+	v[240] = v[238] ^ v[7] ^ v[124] & v[130] & v[201];
+	v[241] = (v[53] ^ (v[58] | v[116])) & v[26];
+	v[242] = v[58] ^ v[116];
+	v[243] = v[224] ^ v[154] & ~v[99] | v[120];
+	v[244] = v[47] & v[124];
+	v[245] = ((v[47] | v[116]) ^ v[53] | v[28]) ^ v[47] ^ v[74] & ~(v[49] & ~v[124] ^ v[51]);
+	v[246] = v[74] & ~(v[56] ^ v[47] & v[124]);
+	v[247] = v[228] ^ v[220] ^ v[101];
+	v[248] = v[245];
+	v[249] = v[157] ^ v[155] & ~v[110] | v[24];
+	v[250] = (v[203] ^ (v[231] | v[74])) & v[176];
+	v[251] = v[91] ^ v[249];
+	v[252] = v[130] | v[116];
+	v[253] = ((v[125] ^ v[62]) & v[142] ^ v[125]) & v[67] ^ v[200] & v[142] ^ v[165] ^ v[158] & ~((v[165] ^ v[142] | v[77]) ^ v[200]) | v[110];
+	v[254] = (v[231] & v[74] ^ (v[130] | v[116])) & v[176] ^ (v[124] & v[130] & v[201] ^ v[116]) & v[74] ^ v[169];
+	v[255] = (v[200] & v[142] ^ v[125] & v[62]) & v[77];
+	v[256] = (v[203] ^ v[130]) & v[74];
+	v[257] = (v[125] & v[62] ^ v[142]) & v[67] ^ v[16] ^ v[165] & v[142] ^ v[200];
+	v[258] = v[251] ^ v[192];
+	v[259] = v[74] & ~v[203] ^ v[170] | v[183];
+	v[260] = (v[156] & ~v[110] ^ v[162]) & ~v[24] ^ v[161] ^ v[163] & ~v[110];
+	v[261] = (v[125] ^ v[62] ^ v[142] & v[62]) & v[77];
+	v[262] = (v[125] | v[62]) & v[142];
+	result[16] = v[254] ^ v[17] & ~(v[236] ^ (v[171] ^ v[238] | v[183]));
+	v[263] = v[241] ^ (v[49] | v[116]);
+	v[264] = (v[49] | v[116]) ^ v[50] ^ (v[58] ^ (v[58] | v[116]) | v[28]) ^ (v[241] ^ v[53]) & v[74];
+	v[265] = (v[49] | v[116]) ^ v[55];
+	v[266] = (v[142] & v[62] ^ v[165]) & v[77] ^ v[199] ^ v[200];
+	v[267] = v[77] & ~v[199];
+	v[268] = v[263] & v[74];
+	v[269] = v[264] ^ v[180];
+	v[270] = v[53] & ~v[49] ^ v[244];
+	v[271] = ~v[63] & v[37];
+	v[272] = v[265] | v[28];
+	v[273] = (v[49] | v[116]) ^ v[53];
+	result[132] = v[130] & v[116];
+	v[274] = v[116] & v[74];
+	v[275] = v[261] ^ v[229];
+	v[276] = v[266] & v[160];
+	v[277] = v[255] ^ v[197];
+	v[278] = (v[36] | v[22] | v[63]) ^ v[36] & v[22];
+	result[24] = v[258] ^ v[191];
+	v[279] = v[69] & ~v[154];
+	v[280] = v[69] & v[42] ^ v[68];
+	v[281] = (v[42] ^ v[77]) & v[23] & v[154];
+	v[282] = v[238] & v[201];
+	v[283] = v[238] & v[74] ^ v[201] & v[130];
+	v[284] = v[154] | v[110] | v[88];
+	v[285] = v[201] & result[132] ^ result[133];
+	v[286] = v[203];
+	v[287] = v[274] & (v[201] ^ v[130]);
+	v[288] = v[130] & v[74] ^ v[252] ^ v[286];
+	v[289] = v[200] ^ v[142] ^ v[229] & v[77];
+	v[290] = v[257] ^ v[160] & ~(v[77] & ~v[229] ^ v[165] & v[142] ^ v[200]);
+	v[291] = v[282] ^ v[130];
+	v[292] = result[133] ^ v[286] ^ v[12] ^ v[252] & v[74] ^ (v[170] ^ v[130] ^ v[256] | v[183]);
+	v[293] = v[22] & ~v[63];
+	v[294] = v[22] & ~v[63] ^ v[36];
+	result[85] = (v[63] | v[36]) ^ v[37] ^ (v[271] ^ v[36]) & v[102];
+	v[295] = ((v[36] | v[22]) & v[20] ^ (v[63] | v[36]) ^ (v[215] ^ v[37]) & v[102]) & v[181] ^ result[85];
+	v[296] = v[208] & v[142];
+	v[297] = (v[271] ^ v[22]) & v[117];
+	v[298] = v[5] & v[97];
+	result[4] = v[292] ^ (v[282] & ~v[74] ^ v[259]) & v[17];
+	v[299] = v[208] & v[142] & v[77];
+	v[300] = v[235] ^ v[285] & v[74] ^ v[283] & v[176];
+	v[301] = v[74] & ~v[291];
+	result[6] = v[290] ^ v[253];
+	v[302] = v[281] ^ v[284] ^ v[68];
+	v[303] = v[262] ^ v[200];
+	result[62] = v[269] ^ (v[248] | v[160]);
+	v[304] = v[270] | v[28];
+	v[305] = v[273] ^ v[272];
+	v[306] = (v[287] ^ v[170]) & v[176];
+	v[307] = ~v[165];
+	v[308] = ~v[165] & v[125];
+	result[22] = v[17] & ~(v[288] ^ v[250]) ^ v[237];
+	result[82] = v[294] ^ v[102];
+	result[81] = result[82] ^ v[181] & ~(v[36] & v[22] & v[63] & v[117] ^ v[215] ^ v[37]);
+	result[66] = (v[295] | v[4]) ^ result[81];
+	v[309] = v[239] ^ v[243];
+	v[310] = v[200] & v[142] ^ v[165] ^ v[267] ^ v[132];
+	v[311] = (v[142] & ~v[200] ^ v[200]) & v[77] ^ v[200] ^ v[160] & ~v[289];
+	v[312] = v[242] ^ v[268] ^ v[304];
+	v[313] = ~result[16];
+	v[314] = v[313] & result[62];
+	v[315] = v[305] ^ v[246];
+	v[316] = v[240] ^ v[301] ^ v[306];
+	v[317] = v[308] ^ v[142] & ~v[200];
+	v[318] = v[17] & ~v[300];
+	v[319] = ~result[6];
+	v[320] = (v[142] & v[125] ^ v[208]) & v[77];
+	v[321] = (v[194] ^ v[280]) & ~v[110];
+	v[322] = result[22];
+	v[323] = result[22] | result[6];
+	v[324] = v[319] & v[322];
+	v[325] = v[322] & result[6];
+	v[326] = v[296] ^ v[125];
+	v[327] = result[24];
+	result[93] = result[16] | result[62];
+	v[328] = v[327] | result[62];
+	v[329] = result[82] ^ v[83];
+	v[330] = v[5] & v[134];
+	v[331] = result[66] ^ v[64];
+	v[332] = v[233] ^ v[232] | v[120];
+	v[333] = v[309] ^ v[223];
+	v[334] = ~result[24];
+	v[335] = v[193] & ~v[110] ^ v[279] | v[24];
+	v[336] = v[310] ^ v[303] & v[160];
+	v[337] = result[62] & ~v[314];
+	result[2] = v[316] ^ v[318];
+	v[338] = v[312] ^ v[103];
+	v[339] = v[317] ^ v[320];
+	v[340] = (v[302] | v[24]) ^ v[198] ^ v[321];
+	v[341] = v[339];
+	v[342] = v[323] & v[319];
+	v[343] = v[319] & result[14];
+	v[344] = result[6] & ~v[325];
+	v[345] = result[14];
+	v[346] = result[6] & v[345];
+	v[347] = v[319] & v[322] & v[345];
+	v[348] = result[93];
+	v[349] = result[22] ^ result[6];
+	v[350] = ~result[22];
+	v[351] = result[14];
+	result[56] = v[160] & ~v[299] ^ v[153] ^ v[275] ^ (v[276] ^ v[277] | v[110]);
+	v[352] = v[350] & v[351];
+	v[353] = v[307];
+	v[354] = v[348] | result[24];
+	v[355] = result[62];
+	v[356] = result[16] & ~v[355];
+	v[357] = v[355] ^ v[328];
+	result[98] = v[314] & v[334];
+	result[18] = v[247] ^ v[63] & ~v[227] ^ v[332];
+	result[46] = v[336] ^ (v[311] | v[110]);
+	v[358] = v[337] ^ result[24];
+	v[359] = result[16] & v[334];
+	result[34] = v[338] ^ v[160] & ~v[315];
+	v[360] = v[315] & ~v[160];
+	v[361] = v[343] ^ result[22];
+	v[362] = v[324] ^ v[343];
+	v[363] = v[325] ^ result[14];
+	v[364] = v[324] ^ v[346];
+	v[365] = v[350] & result[6];
+	v[366] = v[326] & v[77] ^ v[209];
+	v[367] = (v[347] ^ result[22]) & v[340];
+	v[368] = v[341] | v[110];
+	v[369] = v[323] & result[14];
+	v[370] = (v[334] | ~v[355]) & v[333];
+	v[371] = v[44] ^ v[303] ^ v[353] & v[77];
+	v[372] = v[333] & ~v[357];
+	v[373] = result[14];
+	v[374] = v[20] & ~v[63];
+	v[375] = ~result[36];
+	v[376] = ~(v[5] & v[97]);
+	result[116] = v[375] & result[28];
+	result[44] = v[207] ^ v[335] ^ v[212];
+	v[377] = v[358] & ~v[333];
+	v[378] = v[313] & v[333];
+	v[379] = v[359] ^ result[62];
+	v[380] = result[36];
+	result[79] = v[333] & ~result[46];
+	v[381] = v[380] ^ result[28];
+	v[382] = result[18];
+	result[94] = v[381];
+	result[129] = v[382] & ~result[34];
+	v[383] = v[312] ^ v[360];
+	v[384] = v[367];
+	v[385] = ~v[342] & result[14];
+	v[386] = v[344] ^ v[343] | v[340];
+	v[387] = v[369] ^ result[6];
+	v[388] = v[343] ^ v[323];
+	v[389] = v[343] & v[340];
+	v[390] = v[373] & v[340] & v[349];
+	v[391] = v[248] & v[160];
+	v[392] = (v[352] ^ v[349]) & v[340];
+	v[393] = v[352] ^ result[22];
+	v[394] = v[365] ^ result[14];
+	v[395] = v[160] & ~v[366];
+	v[396] = v[356] | result[24];
+	v[397] = v[371] ^ v[368];
+	v[398] = result[93] & v[334] ^ v[356];
+	v[399] = v[333] & ~(result[16] ^ v[354]);
+	v[400] = result[93] ^ v[354];
+	result[134] = result[24] ^ result[62];
+	v[401] = result[93] ^ v[372];
+	v[402] = v[97] & v[376];
+	v[403] = v[4] ^ v[376] & v[134];
+	result[108] = result[24] ^ v[334] & v[333];
+	v[404] = v[334] & v[333] ^ result[93];
+	v[405] = result[36];
+	result[124] = result[28] & ~result[116];
+	result[100] = result[44] | v[405];
+	result[180] = ~v[333] & result[46];
+	result[181] = v[379] ^ v[378];
+	v[406] = result[79];
+	result[48] = v[383] ^ v[135];
+	result[178] = v[333] & ~v[406];
+	v[407] = result[46];
+	result[74] = result[46] | v[333];
+	v[408] = v[407] ^ v[333];
+	v[409] = result[46];
+	result[171] = v[408];
+	v[410] = v[409] & v[333];
+	v[411] = result[34];
+	result[172] = v[410];
+	v[412] = v[411] | result[18];
+	v[413] = result[36];
+	result[175] = v[412];
+	v[414] = v[413] | result[28];
+	v[415] = result[36];
+	result[64] = v[414];
+	v[416] = v[415] & ~result[28];
+	v[417] = result[36];
+	result[126] = v[416];
+	result[99] = v[417] & result[28];
+	v[418] = result[24];
+	v[419] = v[337] | v[418];
+	result[136] = v[361] & v[340] ^ result[22];
+	result[109] = ~v[342] & v[340] ^ v[361];
+	result[174] = v[344] ^ v[340] ^ v[385];
+	v[420] = v[314] | v[418];
+	v[421] = (v[337] | v[418]) ^ v[314];
+	v[422] = result[98];
+	result[144] = v[421];
+	result[173] = v[386] ^ v[342];
+	v[423] = v[419];
+	v[424] = v[333] & ~(v[422] ^ result[16]);
+	v[425] = result[16];
+	result[77] = v[362] & ~v[340] ^ v[364];
+	result[97] = v[347] ^ v[325];
+	v[426] = (v[425] ^ result[62]) & ~v[334];
+	result[104] = v[387] ^ v[384];
+	result[78] = v[340] & ~v[388];
+	v[427] = result[6];
+	result[127] = v[364] ^ v[389];
+	v[428] = v[427] & ~v[340];
+	v[429] = result[22];
+	result[69] = v[428] ^ v[346];
+	v[430] = v[346] ^ v[429];
+	v[431] = result[16];
+	result[158] = v[364] & v[340] ^ v[430];
+	v[432] = result[62];
+	result[102] = ~v[340] & v[363] ^ v[430];
+	result[117] = v[390] ^ v[430];
+	result[166] = v[420] ^ v[431] & v[432];
+	result[156] = v[431] & v[432];
+	v[433] = result[16];
+	result[52] = v[264] ^ v[144] ^ v[391];
+	v[434] = v[433] & ~v[333];
+	v[435] = result[4];
+	result[130] = v[393] ^ v[392];
+	result[120] = v[394] & v[340];
+	v[436] = v[375] & v[435];
+	v[437] = result[94];
+	result[184] = v[436];
+	result[107] = v[437] | result[44];
+	result[20] = v[397] ^ v[395];
+	v[438] = result[24];
+	result[106] = v[404] ^ v[396];
+	v[439] = v[434] ^ v[438];
+	v[440] = result[62];
+	result[183] = v[439];
+	v[441] = v[440];
+	result[168] = v[399] ^ v[440];
+	v[442] = result[134];
+	result[169] = v[400] & ~v[333];
+	result[170] = v[377] ^ result[134];
+	v[443] = result[134];
+	result[137] = v[370] ^ v[396] ^ v[337];
+	result[121] = v[370] ^ v[441];
+	result[159] = v[398] ^ v[370];
+	v[444] = v[398] ^ (v[442] | v[333]);
+	v[445] = result[93] & v[333];
+	v[446] = v[333] & ~v[443];
+	v[447] = result[144];
+	result[138] = v[444];
+	result[103] = v[401] ^ v[423];
+	v[448] = v[447] ^ v[445];
+	v[449] = result[166];
+	result[179] = v[448];
+	result[139] = v[426] ^ v[424];
+	result[163] = v[449] ^ v[446];
+	result[83] = v[294] & v[102] ^ v[37] ^ (v[36] & v[22] | v[63]);
+	result[87] = v[374] & v[36] ^ v[102] & ~v[271];
+	v[450] = v[402];
+	result[30] = ((v[63] | v[22]) ^ v[37] ^ v[278] & v[102]) & ~v[181] ^ v[329] ^ ((v[297] ^ v[63] ^ v[22]) & ~v[181] ^ result[85] | v[4]);
+	v[451] = v[134] & ~v[402];
+	v[452] = v[152] & ~(v[451] ^ v[450]);
+	v[453] = v[403];
+	v[454] = v[152] & ~(v[298] & v[134] ^ v[97]) ^ v[403] | v[181];
+	v[455] = result[50] | v[260];
+	v[456] = v[260] | result[4];
+	result[88] = v[102] & ~v[294] ^ v[22];
+	v[457] = v[97] & v[4];
+	v[458] = v[94] & v[4];
+	v[459] = v[134] & v[94] ^ v[4];
+	v[460] = v[102] & ~v[293];
+	v[461] = v[97] | v[4];
+	result[68] = v[297] ^ v[293];
+	v[462] = v[451] ^ (v[97] | v[4]);
+	result[90] = (v[215] ^ v[36]) & v[102] ^ v[63] ^ v[22];
+	v[463] = ((v[97] ^ v[4]) & v[134] ^ v[94] & v[4]) & v[152];
+	result[89] = v[102] & ~v[278] ^ v[278];
+	result[65] = v[36] & ~v[102];
+	v[464] = result[50];
+	v[465] = v[260] & ~v[464];
+	v[466] = result[50] ^ v[260];
+	v[467] = result[50] & ~v[260];
+	result[67] = v[460] ^ v[36];
+	result[38] = v[340];
+	v[468] = (v[452] ^ v[330] ^ v[4]) & ~v[181];
+	result[0] = v[333];
+	v[469] = v[134] & v[97] & v[4];
+	v[470] = v[469] ^ v[298];
+	result[143] = v[330] ^ v[4];
+	v[471] = v[134] & ~(v[97] ^ v[4]);
+	v[472] = (v[134] & ~(v[97] | v[4]) ^ v[97] ^ v[4]) & v[152];
+	v[473] = v[453] ^ v[152] & ~(v[97] & v[4]);
+	v[474] = v[470] & ~v[152];
+	v[475] = v[134] & v[97];
+	v[476] = result[4];
+	result[118] = v[473];
+	v[477] = (v[94] & v[4] & v[134] ^ v[97] & v[4]) & v[152];
+	v[478] = v[260] & ~v[465] | v[476];
+	v[479] = v[476];
+	v[480] = result[50];
+	v[481] = (v[455] ^ v[456]) & v[331] ^ v[464] ^ v[478];
+	v[482] = ~v[479];
+	v[483] = v[467] | v[479];
+	result[42] = v[260];
+	v[484] = v[455] | v[479];
+	v[485] = v[480] | v[479];
+	v[486] = v[466] & ~v[479] ^ v[260];
+	v[487] = (v[465] | v[479]) ^ v[260];
+	v[488] = v[466] & ~v[479] ^ v[465] | v[331];
+	v[489] = v[330] ^ v[97] & v[4];
+	v[490] = v[488];
+	result[182] = v[170];
+	v[491] = v[330] ^ v[94] & v[4];
+	v[492] = v[471] ^ v[4];
+	result[154] = v[134] & v[4];
+	v[493] = v[471] ^ v[94] & v[4];
+	result[112] = v[94] & v[4] & v[152] ^ v[134] & v[4];
+	v[494] = v[97] | v[4] | v[152];
+	result[151] = v[462];
+	v[495] = v[134];
+	v[496] = v[489] & v[152];
+	v[497] = v[461] & v[134] ^ v[97];
+	result[110] = v[489] ^ v[494];
+	v[498] = v[134] & ~v[458];
+	v[499] = v[469] ^ v[97];
+	v[500] = v[97] ^ v[134];
+	v[501] = v[469] ^ v[457];
+	v[502] = v[97] ^ v[495];
+	v[503] = v[152];
+	v[504] = v[497];
+	v[505] = v[463] ^ v[502];
+	result[152] = v[493];
+	v[506] = v[152] & ~v[499] ^ v[493];
+	v[507] = v[457] & v[152];
+	v[508] = v[457] ^ v[475] ^ v[152];
+	v[509] = v[457] & v[503] ^ v[458];
+	result[148] = v[506];
+	v[510] = v[334];
+	v[511] = v[334] & result[62];
+	v[512] = result[2];
+	result[115] = v[492] ^ v[472];
+	v[513] = v[512] & result[56];
+	v[514] = result[30];
+	result[185] = v[513];
+	v[515] = v[333] & ~v[511];
+	v[516] = v[333] & ~v[514];
+	v[517] = result[185];
+	result[123] = v[516];
+	v[518] = v[517] & ~v[510];
+	v[519] = v[260];
+	v[520] = v[260] & v[482];
+	v[521] = v[331] & ~(v[467] & v[482]);
+	result[113] = v[504];
+	result[145] = v[462] ^ v[507];
+	v[522] = (v[466] ^ v[456]) & v[331];
+	v[523] = v[467] ^ v[456];
+	v[524] = v[518];
+	v[525] = v[467] ^ result[4];
+	result[187] = v[523];
+	v[526] = (v[484] ^ v[519]) & v[331];
+	result[161] = v[483] ^ v[455];
+	v[527] = (v[483] ^ v[519]) & v[331];
+	v[528] = v[485] ^ v[466];
+	v[529] = v[485] ^ result[50];
+	v[530] = result[4];
+	result[150] = v[509] ^ v[498];
+	result[140] = v[505];
+	v[531] = result[50];
+	v[532] = v[466] ^ v[530];
+	v[533] = (v[530] | v[466]) ^ v[531];
+	v[534] = v[520] & v[531];
+	result[73] = v[520] ^ v[531];
+	result[142] = v[459] ^ v[503] & ~v[501];
+	result[146] = v[501] & v[503] ^ v[504];
+	result[149] = v[500] ^ v[474];
+	result[141] = v[491] ^ v[477];
+	result[153] = v[468] ^ v[505];
+	result[147] = v[508];
+	result[114] = v[454] ^ v[508];
+	result[111] = v[496] ^ v[475];
+	v[535] = result[98];
+	result[76] = result[129] | v[331];
+	v[536] = v[535] ^ v[515];
+	v[537] = result[123];
+	v[538] = result[54];
+	result[160] = v[536];
+	result[84] = v[537] & v[538];
+	result[125] = v[481] | result[34];
+	v[539] = v[524] ^ result[56];
+	v[540] = result[2] & ~result[56];
+	result[176] = v[522] ^ v[532];
+	v[541] = v[527] ^ result[50];
+	result[135] = result[161] ^ v[528] & v[331];
+	v[542] = result[129];
+	result[105] = v[525] ^ v[331] & ~v[529];
+	result[75] = v[542];
+	result[95] = v[490] ^ v[487];
+	result[70] = v[521] ^ v[487];
+	result[128] = result[175];
+	result[157] = v[526] ^ result[187];
+	v[543] = result[175];
+	result[71] = v[540];
+	result[167] = v[534] ^ v[455];
+	result[177] = v[543];
+	v[544] = result[50];
+	result[72] = v[532];
+	v[545] = result[64];
+	result[165] = v[541];
+	result[162] = v[545];
+	result[26] = v[331];
+	v[546] = result[126];
+	result[96] = v[526] ^ v[544];
+	result[122] = v[331] & ~v[484];
+	result[101] = v[546];
+	v[547] = result[64];
+	result[86] = v[486] & ~v[331] ^ v[528];
+	result[119] = v[331] & ~v[486] ^ v[533];
+	result[164] = v[547];
+	result[92] = v[487] & v[331] ^ v[528];
+	v[548] = result[73] ^ v[331] & ~v[528];
+	result[91] = result[126];
+	result[80] = v[539];
+	v[549] = result[185];
+	result[131] = v[549];
+	result[186] = v[549];
+	result[155] = v[548];
+
+	return (unsigned char*) result;
 }
 
 //----- (0008930C) --------------------------------------------------------

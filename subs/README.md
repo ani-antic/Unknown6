@@ -76,7 +76,7 @@ See ../c_code/encrypt.c for an already working amalgamation of these.
 | sub_87444     | Called from 564C8       |
 | sub_9E9D8     | Called from 87444, has a main loop that calls functions from table at off_1F7060        |
 | sub_87568+1   | Function table called from 9E9D8        |
-| sub_8930C+1   | Function table called from 9E9D8        |
+| sub_8930C+1   | Function table called from 9E9D8. requires a string/blob of 744 bytes and then decrypt|encrypts it (original content destroyed)        |
 | sub_8B2F4+1   | Function table called from 9E9D8        |
 | sub_8D114+1   | Function table called from 9E9D8        |
 | sub_8F0B0+1   | Function table called from 9E9D8        |
